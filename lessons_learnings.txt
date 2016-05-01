@@ -1,0 +1,90 @@
+** Lesson1 **
+
+
+diff -u for unix readable diff
+fc for windows
+git bash on windows provides unix commands
+
+git log gives list of commits with summary/author and commit id
+
+git diff commitid_old commit_new [remember old comes first]
+git diff f19cb1b80fe27e938e4d72770ca0a42f25e99ecc b0678b161fcf74467ed3a63110557e3d6229cfa6 --stat 
+To stop viewing git log output, press q (which stands for quit).
+
+
+To get colored diff output, run git config --global color.ui auto
+
+
+git show commit_id 
+or
+git show commit_id --stat (also shows differnce of commit)
+
+git log --stat also gives list of changed file plus indicator of size of changes
+
+To clone a repository do
+git clone url [example url https://github.com/udacity/asteroids.git]
+
+git checkout commit id
+
+   [you need to have the commit id of head to come back]
+----------
+** Lesson2 **
+
+.git in each directory has metadata for repository
+
+to make a new repo
+create a new directory with files as necessary
+
+git init makes new repo
+It doesn't create any commits.
+
+If you run git log 
+you get the message
+fatal: bad default revision 'HEAD'
+
+
+git status [status of repository]
+it willl say Initial Status untracked files ...
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  LemonSadam.txt
+  Sambhar.txt
+  ThengaiSadam.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+--
+working directory --> staging area ---> repository
+
+Specifying files to be tracked via git add moves them to staging area
+then commit moves it to repository.
+
+after doing git add ThengaiSadam.txt
+git add LemonSadam.txt
+ and running git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+  new file:   LemonSadam.txt
+  new file:   ThengaiSadam.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  Sambhar.txt
+
+git commit opens editor
+Enter commit message
+git practice is to use message like a command
+Use "Add a method" instead of "Added ..."
+
+
