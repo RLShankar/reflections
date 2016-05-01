@@ -31,5 +31,7 @@ Can tell when the branches diverged, what was the last commit that is common to 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+   Changes from both branches are now integrated in one branch. Because the new commit has pointers back to both parents.
+
 What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
 manually?

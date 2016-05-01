@@ -131,3 +131,23 @@ git checkout -b branch_name is equivalent to git branch branch_name followed by 
 
 If you go back to a previous commit (and head is detached) and you make a new commit there, it can be lost unless you make a new branch.
 This commit will not affect any other commits there.
+----
+git merge branch1 branch2
+
+Note that it will always merge the current branch.
+So make sure that you checkout into one of the branches
+If merge does not work,
+git merge --abort
+
+Also after merge, it will show commits in both parents timeline sorted by timestamp
+
+So, git diff oldcommitid newcommitid will not work if oldcommitid is not ancestor of newcommitid
+Instead do
+git show commitid
+-------
+Merge conflict (Newline characters between Windows and Unix systems)
+Context: Whenever we hit the "Enter" key on the keyboard, we are actually telling the computer to insert an invisible character into our text file to indicate to the computer that there should be a new line. Unix systems adds one character called the "line feed" character or LF or \n while Windows systems adds two characters, "carriage return" and "line feed" or CRLF or \r\n.
+Caroline's files have LF because her files were edited on Mac OSX, which uses LF. If a Windows user were to edit Caroline's files, the Windows text editor might convert all LF to CRLF to make editing files possible. When the Windows user merges her file with Caroline's files, a merge conflict will result due to the different LF and CRLF characters.
+To fix this, Windows users should set the global autocrlf attribute to true: git config --global core.autocrlf true. More information can be found here: https://help.github.com/articles/dealing-with-line-endings/#platform-all
+
+-------
