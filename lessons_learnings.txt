@@ -151,3 +151,8 @@ Caroline's files have LF because her files were edited on Mac OSX, which uses LF
 To fix this, Windows users should set the global autocrlf attribute to true: git config --global core.autocrlf true. More information can be found here: https://help.github.com/articles/dealing-with-line-endings/#platform-all
 
 -------
+When there are conflicts in merge,
+you can edit file to resolve conflict
+doing git status will say both modifed
+do git add and then git commit
+-------
