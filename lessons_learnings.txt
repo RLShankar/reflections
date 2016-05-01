@@ -100,3 +100,34 @@ and then do git commit to make a commit
 
 git reset --hard  
 does a revert of all changes in staging area and working directory
+
+Branches 
+Allows you do parallel edits
+label for a commit
+You can have multiple label for commits
+
+ By default, you are in master branch
+if you do git branch, it tells you which branch you are on
+git checkout branch checksout a branch
+Making a commit automatically updates the branch to the latest commit
+git branch 
+you are in master
+git branch easy-mode  [ makes easy-mode branch]
+branch* (it is currently checked out branch and edoits will be on branch)
+easy-mode
+git checkout easy-mode [now you are in easy mode]
+branch
+easy-mode* 
+-------
+Concept of reachability
+Each commit has its parents information
+Each branch now which commit it is on
+head is the name of current commit
+to see reachability
+
+ git log --graph --oneline branch1 branch2 branch3
+
+git checkout -b branch_name is equivalent to git branch branch_name followed by git checkout branch_name
+
+If you go back to a previous commit (and head is detached) and you make a new commit there, it can be lost unless you make a new branch.
+This commit will not affect any other commits there.
