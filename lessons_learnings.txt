@@ -88,3 +88,15 @@ git practice is to use message like a command
 Use "Add a method" instead of "Added ..."
 
 
+---------------
+When you make a change after commit, the staging area has an exact copy of repository after commit.
+And your changes are in the working directory
+
+if you do git diff, it compares working directory to staging area
+if you do git diff --staged, it compares staging area to repository
+
+you need to git add file to move the edited file to staging area
+and then do git commit to make a commit
+
+git reset --hard  
+does a revert of all changes in staging area and working directory
